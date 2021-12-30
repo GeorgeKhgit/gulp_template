@@ -1,0 +1,26 @@
+.test {
+  width: 500px;
+  height: 500px;
+  background: blue;
+}
+
+@include getMedia($lg_name) {
+  .test {
+    background: black;
+  }
+}
+@include getMedia($md_name) {
+  .test {
+    background: brown;
+  }
+}
+@include getMedia($sm_name) {
+  .test {
+    background: yellowgreen;
+  }
+}
+@include getMedia($xs_name) {
+  .test {
+    background: green;
+  }
+}

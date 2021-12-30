@@ -1,0 +1,31 @@
+// BREACKPOINTS
+$xs: 500px;
+$sm: 720px;
+$md: 1280px;
+$lg: 1440px;
+
+// NAME BP
+$xs_name: "xs";
+$sm_name: "sm";
+$md_name: "md";
+$lg_name: "lg";
+
+@mixin getMedia($bp) {
+  @if $bp == $xs_name {
+    @media screen and (max-width: $xs) {
+      @content;
+    }
+  } @else if $bp == $sm_name {
+    @media screen and (max-width: $sm) {
+      @content;
+    }
+  } @else if $bp == $md_name {
+    @media screen and (max-width: $md) {
+      @content;
+    }
+  } @else if $bp == $lg_name {
+    @media screen and (max-width: $lg) {
+      @content;
+    }
+  }
+}
